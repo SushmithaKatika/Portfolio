@@ -1,0 +1,51 @@
+---
+import { siteConfig } from "../config";
+const hasCertificates = siteConfig.certificates && siteConfig.certificates.length > 0;
+---
+
+{hasCertificates && (
+  <section id="certifications" class="p-4 sm:p-6 md:p-8 lg:p-12">
+    <div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <div class="lg:col-span-4">
+          <h2 class="text-3xl sm:text-4xl md:text-4xl xl:text-6xl font-bold text-gray-900">
+            Certification
+          </h2>
+          
+          <div
+            class="w-[75px] h-[5px] mt-2 rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          />
+        </div>
+
+        <div class="lg:col-span-8">
+          <div class="space-y-6">
+            {siteConfig.certificates.map((certificate, index) => (
+              <div class="p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-xl sm:text-2xl font-bold text-gray-900">{certificate.name}</h3>
+                  {certificate.link && (
+                    <a
+                      href={certificate.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-sm text-blue-600 hover:underline"
+                    >
+                      View
+                    </a>
+                  )}
+                </div>
+                {certificate.issuer && (
+                  <p class="text-gray-600 mt-1">{certificate.issuer}</p>
+                )}
+                {certificate.date && (
+                  <p class="text-gray-500 text-sm mt-1">{certificate.date}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
