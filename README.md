@@ -8,13 +8,10 @@ This was completely rebuilt from the ground up from V1. This template was built 
 
 This template also comes with `CLAUDE.md` and `.cursor/rules` files for easy integration with your existing AI workflows.
 
-> **📬 Connect & Share!**  
-> For questions and updates, feel free to reach out on [**X (Twitter)**](https://x.com/rfitzio).  
-> If you've built and published your personal site with this template, I'd love to see it! Send me a DM 🚀
 
 ## Preview
 
-To view a live preview of the site, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+To view a live preview of the site, [click here](https://katikasushmitha-portfolio-dev.vercel.app/).
 
 ## Built With
 

@@ -1,0 +1,42 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="resume" class="p-8 sm:p-12 md:p-16 lg:p-24">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+    <!-- Left Column: Heading -->
+    <div class="lg:col-span-4 flex flex-col justify-center">
+      <h2 class="text-3xl sm:text-4xl md:text-4xl xl:text-6xl font-bold text-gray-900">
+        Resume
+      </h2>
+      <div
+        class="w-[75px] h-[5px] mt-2 rounded-full"
+        style={`background-color: ${siteConfig.accentColor}`}
+      />
+    </div>
+
+    <!-- Right Column: Description + Buttons -->
+    <div class="lg:col-span-8 flex flex-col justify-center gap-4">
+      <p class="text-gray-600">
+        Click the buttons below to view or download my full resume.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="/Sushmitha_Katika_Resume.pdf"
+          target="_blank"
+          class="px-6 py-2 bg-[var(--accent-color)] text-white rounded-lg hover:bg-opacity-80 transition-colors"
+          style={`--accent-color: ${siteConfig.accentColor}`}
+        >
+          Open Resume
+        </a>
+        <a
+          href="/Sushmitha_Katika_Resume.pdf"
+          download
+          class="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors"
+        >
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

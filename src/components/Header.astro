@@ -5,6 +5,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 const hasCertificates = siteConfig.certificates && siteConfig.certificates.length > 0;
+const hasResume = true; // Always show Resume link
 
 ---
 
@@ -22,6 +23,18 @@ const hasCertificates = siteConfig.certificates && siteConfig.certificates.lengt
           About
         </a>
       </li>
+      {
+        hasResume && (
+          <li>
+            <a
+              href="#resume"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Resume
+            </a>
+          </li>
+        )
+      }
       {
         hasProjects && (
           <li>
